@@ -1,0 +1,8 @@
+include MANIFEST.in
+include requirements.txt
+include lim_procurement/*.json
+include lim_procurement/*/*.json
+include lim_procurement/*/*.html
+include lim_procurement/*/*.js
+include lim_procurement/*/*.css
+include lim_procurement/fixtures/*.json

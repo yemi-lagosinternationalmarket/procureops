@@ -1,0 +1,6 @@
+Proprietary — internal use by Lagos International Market.
+
+Per ADR 0019 (https://github.com/yemi-lagosinternationalmarket/b2b-starter/blob/main/docs/adr/0019-lim-custom-app-licensing-posture.md):
+this app remains unlicensed (private) while LIM uses it internally. If distribution
+is ever undertaken, this app will be re-licensed under GPL v3 to align with
+ERPNext's GPL v3 upstream.

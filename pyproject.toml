@@ -1,0 +1,16 @@
+[project]
+name = "lim_procurement"
+authors = [
+    { name = "Lagos International Market", email = "ibrahimolayemi09@gmail.com" }
+]
+description = "LIM-specific extensions of ERPNext: Custom Fields, Custom DocTypes, hooks, and whitelisted REST methods."
+requires-python = ">=3.10"
+readme = "README.md"
+dynamic = ["version"]
+dependencies = [
+    # `frappe` is provided by the bench environment; not redeclared here.
+]
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
