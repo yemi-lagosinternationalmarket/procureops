@@ -4,9 +4,9 @@ from frappe import _
 def get_data():
 	return [
 		{
-			"module_name": "LIM Procurement",
+			"module_name": "ProcureOps",
 			"category": "Modules",
-			"label": _("LIM Procurement"),
+			"label": _("ProcureOps"),
 			"color": "grey",
 			"icon": "octicon octicon-package",
 			"type": "module",

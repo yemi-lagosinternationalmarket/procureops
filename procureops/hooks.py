@@ -1,5 +1,5 @@
-app_name = "lim_procurement"
-app_title = "LIM Procurement"
+app_name = "procureops"
+app_title = "ProcureOps"
 app_publisher = "Lagos International Market"
 app_description = "LIM-specific extensions of ERPNext: Custom Fields, Custom DocTypes, hooks, and whitelisted REST methods. See https://github.com/yemi-lagosinternationalmarket/b2b-starter ADR 0018/0019."
 app_email = "ibrahimolayemi09@gmail.com"

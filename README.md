@@ -1,4 +1,4 @@
-# lim_procurement
+# procureops
 
 LIM-specific Frappe Custom App on top of ERPNext. Extends ERPNext's native Supplier / Item / Purchase Order DocTypes with LIM's procurement attributes, adds the `LIM Activity` polymorphic audit-log DocType, and exposes whitelisted REST methods for the procurement-agent to call.
 
@@ -14,16 +14,16 @@ This app is one piece of LIM's commerce + procurement platform. The platform's a
 
 1. **Don't fork ERPNext.** Use hooks, Custom Fields (via Fixtures), and whitelisted REST methods.
 2. **Don't import private ERPNext modules.** Use documented Frappe Framework primitives (`frappe.get_doc`, `frappe.db.get_value`, `@frappe.whitelist`, hooks).
-3. **Custom Fields go in Fixtures** (`lim_procurement/fixtures/custom_field.json`). Versioned, portable, deployable as data — not as patches.
+3. **Custom Fields go in Fixtures** (`procureops/fixtures/custom_field.json`). Versioned, portable, deployable as data — not as patches.
 4. **Custom DocTypes only when ERPNext has no native equivalent** (e.g., `LIM Activity` for cross-system audit log).
-5. **Tests in pytest** under `tests/`. Frappe test runner via `bench run-tests --app lim_procurement`.
+5. **Tests in pytest** under `tests/`. Frappe test runner via `bench run-tests --app procureops`.
 
 ## What this app contains
 
 ### Shipped in A.1' (b2b-starter [#31](https://github.com/yemi-lagosinternationalmarket/b2b-starter/issues/31))
 
 - **App scaffold** — standard Frappe app layout (`hooks.py`, `modules.txt`, `pyproject.toml`/`setup.py`, fixtures dir, default module dir).
-- **11 Supplier Custom Fields** declared in `lim_procurement/fixtures/custom_field.json`:
+- **11 Supplier Custom Fields** declared in `procureops/fixtures/custom_field.json`:
   - `agent_authority` (Select: `full_auto` / `draft_only` / `review_only`, default `draft_only`)
   - `tone_reference_message_id` (Data — opaque ref into `apps/messaging`)
   - `frequency` (Select: `As Needed` / `Weekly` / `Bi-weekly` / `Monthly`, default `As Needed`)
@@ -53,15 +53,15 @@ This app is one piece of LIM's commerce + procurement platform. The platform's a
 ### Frappe Cloud (production — `lagosinternationalmarket.v.frappe.cloud`)
 
 1. Open the Frappe Cloud dashboard for the site.
-2. Apps → **Add app** → **Bring your own app** → point at `https://github.com/yemi-lagosinternationalmarket/lim-procurement` (branch `main`).
+2. Apps → **Add app** → **Bring your own app** → point at `https://github.com/yemi-lagosinternationalmarket/procureops` (branch `main`).
 3. Frappe Cloud builds the bench image. Once ready, install on the site.
-4. The fixture in `lim_procurement/fixtures/custom_field.json` applies on install + on every `bench migrate`. Verify by opening any Supplier — the 11 Custom Fields should appear after **Supplier Group**.
+4. The fixture in `procureops/fixtures/custom_field.json` applies on install + on every `bench migrate`. Verify by opening any Supplier — the 11 Custom Fields should appear after **Supplier Group**.
 
 ### Local bench
 
 ```bash
-bench get-app https://github.com/yemi-lagosinternationalmarket/lim-procurement.git
-bench --site <your-site> install-app lim_procurement
+bench get-app https://github.com/yemi-lagosinternationalmarket/procureops.git
+bench --site <your-site> install-app procureops
 bench --site <your-site> migrate
 ```
 

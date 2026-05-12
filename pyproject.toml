@@ -1,5 +1,5 @@
 [project]
-name = "lim_procurement"
+name = "procureops"
 authors = [
     { name = "Lagos International Market", email = "ibrahimolayemi09@gmail.com" }
 ]

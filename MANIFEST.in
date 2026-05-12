@@ -1,8 +1,8 @@
 include MANIFEST.in
 include requirements.txt
-include lim_procurement/*.json
-include lim_procurement/*/*.json
-include lim_procurement/*/*.html
-include lim_procurement/*/*.js
-include lim_procurement/*/*.css
-include lim_procurement/fixtures/*.json
+include procureops/*.json
+include procureops/*/*.json
+include procureops/*/*.html
+include procureops/*/*.js
+include procureops/*/*.css
+include procureops/fixtures/*.json
